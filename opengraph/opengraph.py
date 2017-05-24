@@ -9,9 +9,10 @@ from bs4 import BeautifulSoup
 
 class OpenGraph(object):
     useragent = None
-    __data__ = {}
+    __data__  = {}
 
     def __init__(self, url=None, html=None, useragent=None):
+        self.__data__ = {}
         if useragent:
             self.useragent = useragent
         content = html or self._fetch(url)
